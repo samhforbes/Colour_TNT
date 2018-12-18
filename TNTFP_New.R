@@ -11,8 +11,7 @@ library(xtable)
 library(ggplot2);theme_set(theme_classic(base_size = 28))
 library(eyetrackingR)
 
-tnt <- read.csv('Data/TNT_All_Mod2.csv', row.names = 1)
-
+tnt <- readRDS('Data/TNT_All.rds')
 tnt$TrialType <- as.character(tnt$TrialType)
 
 tnt <- subset(tnt, TrialType != 'Filler')
